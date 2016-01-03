@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>关于我们</title>
+	<meta charset="utf-8">
+	<script src="../common/js/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../common/css/ui-base.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/ui-box.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/ui-color.css">
+	<link rel="stylesheet" type="text/css" href="../css/aboutUs.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/bootstrap.min.css">
+    <script src="../common/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header ub ub-ac"> 
+		<div style="width:8%;"></div>
+		<div style="-webkit-box-flex:1;display: -webkit-box;-moz-box-flex:1;display: -moz-box;-ms-flex:1;display: -ms-flexbox;">
+			<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;float:left;"></div>
+			<div class="ub ub-ac uc-a1 query-input">
+                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+                    <input type="text" style="outline: none;font-family: Arial, '微软雅黑', sans-serif;font-size:1em;border:none;margin-left:0.3em;" />
+            	</div>
+            </div>
+			<div class="uc-a1 search">
+				<button type="submit" class="btn-search">搜索</button>
+			</div>
+		</div>
+		<div>
+			<ul class="bc-border ub t-bla ub-pc zylj">
+				<li><a href="/menu">首页</a></li>
+				<li><a href="/personalTailor">私人定制</a></li>
+				<li><a href="">路尚会员</a></li>
+				<li><a href="/aboutUs">关于我们</a></li>
+			</ul>
+		</div>
+		<div style="width:8%;"></div>
+	</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol><!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="../../image/s_1.jpg" alt="新西兰南岛自驾" />
+				<div class="carousel-caption istbg uc-a2">新西兰南岛自驾</div>
+			</div>
+			<div class="item">
+				<img src="../../image/s_2.jpg" alt="圣托尼里" />
+				<div class="carousel-caption istbg uc-a2">圣托尼里</div>
+			</div>
+			<div class="item">
+				<img src="../../image/s_3.jpg" alt="中国九寨沟" />
+				<div class="carousel-caption istbg uc-a2">中国九寨沟</div>
+			</div>
+		</div>
+	</div>
+	<div class="content ub ub-ac">
+		<div class="aboutUs">
+			<p>公司简介:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路尚意为“NO SAME”，它意味不一样的一切，驮着如意宝，将梵音带至风能吹到的每个地方。这世上一切美好事物，音乐、文学、艺术、建筑、时装⋯⋯无不始于灵光乍现，旅行更不例外。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路尚旅行就是这样一匹矫健风马，与您同行，为您效力。成立于2014年，由热爱设计、艺术的旅行家组成。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们的足迹已遍布全球数十个国家和地区，既分享无穷旅行灵感，也提供旅行咨询和定制服务，量体裁衣，为您策划和安排个性化旅程，潜入世界精致而隐秘的每个角落，收获值得回忆一生的体验和闪光时刻。</p>
+			<p>宗旨：您旅行中的私人管家。</p>
+			<p>理念：只要出发就会到达。</p>
+		</div>
+	</div>
+	<div class="ub ub-ac ub-pc" style="margin:0 auto;width:80%;height:400px;background: url(../../image/end_img.jpg) no-repeat;">
+		<a href="personalTailor.html" class="uc-a1 dzlx">定制您的旅行</a>
+	</div>
+	<div class="tianchong"></div>
+	<div class="footer ub ub-ac">
+		<div class="link-footer" >
+         	<h4>友情链接 LINK</h4>
+         	<a href="http://www.woqu.com" class="link_a">我趣旅行网</a>
+         	<a href="http://www.qyer.com" class="link_a">穷游网</a>
+         	<a href="http://www.kdhcn.com" class="link_a">康定红葡萄酒</a>
+         	<a href="http://vacations.ctrip.com/" class="link_a">携程旅游</a>
+         	<a href="http://www.lotour.com/" class="link_a">乐途旅游</a>
+         	<a href="http://www.tuniu.com/?p=1558&amp;utm_source=baidu&" class="link_a">途牛旅游网</a>
+         	<a href="http://www.mangocity.com/" class="link_a">芒果网</a>
+         	<a href="http://www.mafengwo.cn" class="link_a">马蜂窝旅游网</a>
+         	<a href="http://www.autohome.com.cn/" class="link_a">汽车之家</a>        
+
+        	<div class="end_line"></div>
+        	<p>版权所有路尚旅游 © 2015-2017蜀ICP备14005513号</p>
+    	</div>
+	</div>
+</body>
+<script type="text/javascript" language="javascript">
+	$(function(){
+		$('.carousel').carousel();
+	});
+	$(function(){
+		$(window).scroll(function(){
+	    	if($(this).scrollTop()>100){
+	    		$(".header").css({position:"fixed","z-index":"99999"});
+	    	}else{
+	    		$(".header").css({"position":"relative"});
+	    	}
+		});
+	});
+</script>
+</html>
