@@ -1,3 +1,4 @@
+#encoding: utf-8
 from django.shortcuts import render_to_response
 from django.template import loader, Context
 from django.http import HttpResponse
@@ -11,8 +12,11 @@ def routeDetails(request, route_id):
     print b_d
     return render_to_response('routeDetails.html')
 
+#def seachRoute(request):
+        
+
 def personalTailor(request):
-    if request.method == 'POST':#request.POST:
+    if request.method == 'POST':
         print "bbb"
         name = request.POST.get('name')
         phone = request.POST.get('phone')
@@ -21,15 +25,26 @@ def personalTailor(request):
         price = request.POST.get('price')
         approach = request.POST.get('approach','')
         hotel = request.POST.get('hotel','')
-        travel_requirement = request.POST.get('travel_requirement', '') 
-        print name,phone,destination,days,price,approach
+        travel_requirement = request.POST.get('travel_requirement', '')
         strjson = {}
+        if not name:
+            strjson['ret_code'] = -1
+            strjson['msg'] = u"名字不能为空"
+            print strjson
+            return HttpResponse(json.dumps(strjson), content_type='application/json')
+        if not phone:
+            strjson['ret_code'] = -1
+            strjson['msg'] = u"电话不能为空"
+            print strjson
+            return HttpResponse(json.dumps(strjson), content_type='application/json')
+        travel = PrivateOrder(name = name, phone = phone, destination = destination, days = days, price = price, 
+                              approach = approach, hotel = hotel, travel_requirement = travel_requirement)
+        travel.save()
+        print name,phone,destination,days,price,approach
         strjson['ret_code'] = 0 
         return HttpResponse(json.dumps(strjson), content_type='application/json')
-#        HttpResponse(json.dumps(name_dict), content_type='application/json')
-#        return render_to_response('personalTailor.html',{'data':0}, context_instance=RequestContext(request))
     else:
-        return render_to_response('personalTailor.html')#,context_instance=RequestContext(request))
+        return render_to_response('personalTailor.html')
 
 
 def view(request,template_name):
