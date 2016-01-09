@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>私人订制</title>
+	<title>路尚会员</title>
 	<meta charset="utf-8">
 	<script src="/static/common/js/jquery-1.11.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-base.css">
 	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-box.css">
 	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-color.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/personalTailor.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/hygs.css">
 	<link rel="stylesheet" type="text/css" href="/static/common/css/bootstrap.min.css">
     <script src="/static/common/js/bootstrap.min.js"></script>
 </head>
@@ -60,52 +60,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="position">当前位置：首页<私人定制</div>
-	<div class="content">
-		<div class="bg-img ub ub-ac ub-pc">
-			<div class="dzTable ub ub-pc ub-ac">
-				<h1 class="title">定制属于自己的旅行</h1>
-				<div style="font-size: 1.5em;">——&nbsp;&nbsp;享受不一样的一切&nbsp;&nbsp;——</div>
-				<div class="inputs ub ub-ac">
-					<div class="ub ub-pc" style="margin:1em 0;width:100%;">
-						<div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="text" placeholder="姓名" class="dz-input"/>
-			            	</div>
-			            </div>
-			            <div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="number" placeholder="天数" min="1" class="dz-input"/>
-			            	</div>
-			            </div>
-		            </div>
-		            <div class="ub ub-pc" style="margin:1em 0;width:100%;">
-						<div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="text" placeholder="联系方式" class="dz-input"/>
-			            	</div>
-			            </div>
-			            <div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="text" placeholder="目的地" class="dz-input"/>
-			            	</div>
-			            </div>
-		            </div>
-		            <div class="ub ub-pc" style="margin:1em 0;width:100%;">
-						<div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="text" placeholder="住宿" class="dz-input"/>
-			            	</div>
-			            </div>
-			            <div class="uc-a1 shuru-input">
-			                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
-			                    <input type="text" placeholder="出行要求" class="dz-input"/>
-			            	</div>
-			            </div>
-		            </div>
-			        <div class="start uc-a1">
-						<button type="submit" class="btn-start">开始旅程</button>
-					</div>
+	<div class="content ub">
+		<div style="margin: 2em 0;">
+			<div class="ub ub-pc uc-a1 login btn-same">旅程故事</div>
+		</div>
+		<div class="ub ub-ac ub-pc article">
+			<div class="ub ub-pc bg-article">
+				<div class="title">
+					<input type="text" placeholder="标题" id="title">
+				</div>
+				<div class="msg">
+					<textarea rows="5" placeholder="请记录您的旅程故事，内容不得超过三百字！" id="msg"></textarea>
+				</div>
+				<div class="tj uc-a1 ub ub-pc">
+					<button type="submit" class="btn-tj">提交</button>
 				</div>
 			</div>
 		</div>
@@ -136,11 +104,86 @@
 	$(function(){
 		$(window).scroll(function(){
 	    	if($(this).scrollTop()>100){
-	    		$(".header").css({position:"fixed","z-index":"9999"});
+	    		$(".header").css({position:"fixed","z-index":"99999"});
 	    	}else{
 	    		$(".header").css({"position":"relative"});
 	    	}
 		});
 	});
+
+	$(document).ready(function(){
+		createCode();
+		clickListener();
+	});
+	
+	var code; //在全局 定义验证码  
+	function createCode() {
+	  	code = "";
+		var codeLength = 4;//验证码的长度  
+		var checkCode = document.getElementById("checkCode");
+		var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');//所有候选组成验证码的字符，当然也可以用中文的  
+		  
+		for (var i = 0; i < codeLength; i++) {
+			var charIndex = Math.floor(Math.random() * 60);
+		    code += selectChar[charIndex];
+		}
+	    if (checkCode) {
+		    checkCode.className = "code";
+		    checkCode.value = code;
+	    }
+	    code = code.toLowerCase ();
+	}
+
+	function clickListener(){
+		$(".login").on("click",function(){
+			$(this).addClass("btn-same");
+			$(this).siblings().removeClass("btn-same");
+			$(".l-reg").css("display","block");
+			$(".c-reg").css("display","none");
+		});
+		$(".regist").on("click",function(){
+			$(this).addClass("btn-same");
+			$(this).siblings().removeClass("btn-same");
+			$(".l-reg").css("display","none");
+			$(".c-reg").css("display","block");
+		});
+		$("#regist").on("click",function(){
+			var name = $("#name").val();
+			var phone= $("#phone").val();
+			var email= $("#email").val();
+			var pwd= $("#pwd").val();
+			var surepwd= $("#surepwd").val();
+			if (!name) {
+				$(".tishi1").text("昵称不能为空！");
+				$(".tishi1").css("color","red");
+				$("#name").focus();
+				return;
+			}
+			if (!phone) {
+				$(".tishi2").text("电话号码不能为空！");
+				$(".tishi2").css("color","red");
+				$("#phone").focus();
+				return;
+			}
+			if (!email) {
+				$(".tishi3").text("电子邮箱不能为空！");
+				$(".tishi3").css("color","red");
+				$("#email").focus();
+				return;
+			}
+			if (!pwd) {
+				$(".tishi4").text("密码不能为空！");
+				$(".tishi4").css("color","red");
+				$("#pwd").focus();
+				return;
+			}
+			if (!surepwd) {
+				$(".tishi5").text("确认密码不能为空！");
+				$(".tishi5").css("color","red");
+				$("#surepwd").focus();
+				return;
+			}
+		});
+	}
 </script>
 </html>

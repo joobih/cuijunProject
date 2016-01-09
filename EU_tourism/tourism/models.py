@@ -2,12 +2,53 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib import admin
+import datetime
+
+#会员表
+class User(models.Model):
+    name = models.CharField(max_length = 20, verbose_name = "会员姓名")			#会员姓名
+    phone = models.CharField(max_length = 30, verbose_name = "会员电话")        #会员电话
+    email = models.CharField(max_length = 30, verbose_name = "会员邮箱")        #会员邮箱
+    password = models.CharField(max_length = 50, verbose_name = "密码")         #登录密码
+    create_at = models.DateTimeField(default = datetime.datetime.now(), verbose_name = "创建时间")
+    
+    class Meta:
+        verbose_name = u"会员用户"
+        verbose_name_plural = u"会员用户"
+
+    def __unicode__(self):
+        return self.name
+
+    def __str__(self):
+        return self.name.encode('utf-8')
+
+#def get_default_user():
+#    return User.objects.get(id=1)
+#留言表
+class LeaveMessage(models.Model):
+    user = models.ForeignKey(User, related_name="usermessages", verbose_name = "会员名")
+    title = models.CharField(max_length = 50,verbose_name = "标题")
+    content = models.CharField(max_length = 255, verbose_name = "留言内容")
+    create_time = models.DateTimeField(default = datetime.datetime.now(), verbose_name = "留言时间")
+
+    class Meta:
+        verbose_name = u"留言表"
+        verbose_name_plural = u"留言表"
+    
+    def __unicode__(self):
+        return self.title
+
+    def __str__(self):
+        return self.title.encode('utf-8')
+
+    def get_queryset(self):
+        return super(LeaveMessage, self).get_queryset().order_by('-create_time')
 
 class BoutiqueLine(models.Model):
     name = models.CharField(max_length = 255, verbose_name = "精品路线名称")           #精品路线的名字
     days = models.IntegerField()                                                       #需要的天数
     pic_address = models.CharField(max_length = 255, verbose_name = "图片地址")        #默认图片的地址
-    may_pic_address = models.CharField(max_length = 255, null = True, verbose_name = "地图地址")      #路线总览地图地址
+    map_pic_address = models.CharField(max_length = 255, null = True, verbose_name = "地图地址")      #路线总览地图地址
     price = models.DecimalField(max_digits = 10, decimal_places = 2, null = True)      #参考价格
     
     class Meta:
@@ -18,10 +59,13 @@ class BoutiqueLine(models.Model):
         return self.name
 
     def __str__(self):
-        return self.name.encode('utf-8');
+        return self.name.encode('utf-8')
+
+#def get_default_boutiqueline():
+#    return BoutiqueLine.objects.get(id=1)
 
 class BoutiqueLineDetails(models.Model):
-    boutiqueline = models.ForeignKey(BoutiqueLine, related_name='Bboutique_line')
+    boutiqueline = models.ForeignKey(BoutiqueLine, related_name="boutiqueline", verbose_name = "精品路线")
     day_numbers = models.IntegerField(verbose_name = "第几天")                                        #由精品路线中的days字段决定的第几天的天数。
     node_details = models.TextField(null = True, verbose_name ="路途描述")
     approach = models.CharField(max_length = 255, null = True, verbose_name = "途径地描述")           #途径地的描述
@@ -61,7 +105,11 @@ class PrivateOrder(models.Model):
     def __str__(self):
         return (u"私人订制--" + self.name).encode("utf-8")
 
+
+
 admin.site.register(BoutiqueLine)
 admin.site.register(BoutiqueLineDetails)
 admin.site.register(PrivateOrder)
+admin.site.register(User)
+admin.site.register(LeaveMessage)
 # Create your models here.

@@ -3,13 +3,18 @@
 <head>
 	<title>路线详情</title>
 	<meta charset="utf-8">
-	<script src="../common/js/jquery-1.11.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../common/css/ui-base.css">
-	<link rel="stylesheet" type="text/css" href="../common/css/ui-box.css">
-	<link rel="stylesheet" type="text/css" href="../common/css/ui-color.css">
-	<link rel="stylesheet" type="text/css" href="../css/routeDetails.css">
-	<link rel="stylesheet" type="text/css" href="../common/css/bootstrap.min.css">
-    <script src="../common/js/bootstrap.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link href='http://fonts.useso.com/css?family=Raleway:400,800,500,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/static/common/css/normalize.css" />
+	<script src="/static/common/js/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-base.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-box.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-color.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/routeDetails.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <script src="/static/common/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="bukexue">
@@ -20,7 +25,9 @@
 	<div class="header ub ub-ac"> 
 		<div style="width:8%;"></div>
 		<div style="-webkit-box-flex:1;display: -webkit-box;-moz-box-flex:1;display: -moz-box;-ms-flex:1;display: -ms-flexbox;">
-			<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;float:left;"></div>
+			<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;float:left;">
+				<img src="/static/image/logo.png" style="height: 35px;">
+			</div>
 			<div class="ub ub-ac uc-a1 query-input">
                 <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
                     <input type="text" style="outline: none;font-family: Arial, '微软雅黑', sans-serif;font-size:1em;border:none;margin-left:0.3em;" />
@@ -32,10 +39,11 @@
 		</div>
 		<div>
 			<ul class="bc-border ub t-bla ub-pc zylj">
-				<li><a href="menu.html">首页</a></li>
-				<li><a href="personalTailor.html">私人定制</a></li>
-				<li><a href="">路尚会员</a></li>
-				<li><a href="aboutUs.html">关于我们</a></li>
+				<li><a href="/menu">首页</a></li>
+				<li><a href="/boutiqueRoute">精品路线</a></li>
+				<li><a href="/personalTailor">私人定制</a></li>
+				<li><a href="/lshy">路尚会员</a></li>
+				<li><a href="/aboutUs">关于我们</a></li>
 			</ul>
 		</div>
 		<div style="width:8%;"></div>
@@ -49,15 +57,15 @@
 		</ol><!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../../image/s_1.jpg" alt="新西兰南岛自驾" />
+				<img src="/static/image/s_1.jpg" alt="新西兰南岛自驾" />
 				<div class="carousel-caption istbg uc-a2">新西兰南岛自驾</div>
 			</div>
 			<div class="item">
-				<img src="../../image/s_2.jpg" alt="圣托尼里" />
+				<img src="/static/image/s_2.jpg" alt="圣托尼里" />
 				<div class="carousel-caption istbg uc-a2">圣托尼里</div>
 			</div>
 			<div class="item">
-				<img src="../../image/s_3.jpg" alt="中国九寨沟" />
+				<img src="/static/image/s_3.jpg" alt="中国九寨沟" />
 				<div class="carousel-caption istbg uc-a2">中国九寨沟</div>
 			</div>
 		</div>
@@ -65,190 +73,144 @@
 	<div class="position">当前位置：首页<精品路线推荐<北极圈冰雪体验之旅</div>
 	<div class="content ub ub-ac">
 		<div class="detiles">
-			<div class="daohang">
-				<div class="day"><a href="#day1">DAY1</a></div>
-				<div class="day"><a href="#day2">DAY2</a></div>
-				<div class="day"><a href="#day3">DAY3</a></div>
-				<div class="day"><a href="#day4">DAY4</a></div>
-				<div class="day"><a href="#day5">DAY5</a></div>
-				<div class="day"><a href="#day6">DAY6</a></div>
-				<div class="day"><a href="#day7">DAY7</a></div>
-			</div>
-			<div class="xiangqing">
-				<div class="lxzg">
-					<h2 class="title">北极圈冰雪体验之旅</h2>
-					<div class="ub ub-pc" style="width:90%;margin:0 auto;overflow: hidden;">
-						<img src="../../image/map.jpg" class="map">
-					</div>
-				</div>
-				<div class="day1" id="day1">
-					<div class="zjct-img ub ub-ac ub-pc">D1</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY1</p>
-								<p style="font-weight:bold;font-size:1.5em;">成都-赫尔辛基</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都前往芬兰，时间为12小时~14小时，长时间的飞行很疲惫，带个护颈枕可以有效缓解不适，如果不想睡觉的朋友，飞机上有中文的电视电影节目可以用来打发时间。到达赫尔辛基后，接机前往酒店，充分休整后夜游赫尔辛基。赫尔辛基Helsinki濒临波罗的海，是一座古典美与现代文明融为一体的都市，既体现出欧洲古城的浪漫情调，又充满国际化大都市的韵味。同时，她又是一座都市建筑与自然风光巧妙结合在一起的花园城。市内建筑多用浅色花岗岩建成，有“北方洁白城市”之称。</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day1_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day1_2.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day1_3.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day1_4.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day2" id="day2">
-					<div class="zjct-img ub ub-ac ub-pc">D2</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY2</p>
-								<p style="font-weight:bold;font-size:1.5em;">赫尔辛基-洛瓦涅米</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;酒店早餐后进行赫尔辛基市内观光，参观斯堪的纳维亚半岛最大的东正教教堂乌斯潘斯教堂以及赫尔辛基市区的标志性建筑主教堂，还有全部以岩石建造的别具一格的岩石教堂，之后游览西贝柳斯公园，芬兰伟大的作曲家西贝柳斯是芬兰民族乐派的奠基人和杰出代表，芬兰人视其为音乐之父。下午在码头集市闲逛，自由选购芬兰特产和旅游纪念品。晚上搭乘火车前往圣诞老人的故乡罗瓦涅米。（20:00 从Helsinki中央火车站出发。巴士将依次通过坦佩雷、韦斯屈莱、奥卢，并与第二天早上抵达罗瓦涅米。）</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day2_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day2_2.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day2_3.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day3" id="day3">
-					<div class="zjct-img ub ub-ac ub-pc">D3</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY3</p>
-								<p style="font-weight:bold;font-size:1.5em;">罗瓦涅米 - 库萨摩卢卡</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;酒店早餐后前往参观圣诞老人村。跨越北纬66度33分，领取跨越北极圈证书。在圣诞老人官方邮局寄上一张带有特别邮戳的纪念卡片，也可以选择请工作人员在来年圣诞节寄出，给自己埋下一份圣诞节惊喜。到圣诞老人办公室，进入神秘的圣诞老人城堡，与圣诞老人会面并合影。 中午从圣诞老人村离开，到达罗瓦涅米原住民驯鹿庄园，在小木屋中品尝鹿园主人烹调的美味驯鹿大餐。午饭后观看芬兰北部特有的大型驯鹿并参加芬兰传统而原始的狩鹿祝福仪式。在庄园主人的保护下，亲自喂食鹿群或与小鹿玩耍，接着体验鹿拉雪橇穿行林间，感受拉普兰风情。晚餐后由领队带领前往入住库萨摩卢卡国家公园旁的木屋。夜晚你可以在山顶上360度全方位观看北极光！库萨摩卢卡位于北极地区，这里的极光极为活跃。据权威统计，每年的9月至第二年的4月共有200余天可以看到极光！这意味着看到极光的概率达到80%！只有当多云阴天时，极光会暂时远离我们。不过，在我们的一周旅行中，晴天的概率还是相当大的。。</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day3_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day3_2.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day3_3.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day4" id="day4">
-					<div class="zjct-img ub ub-ac ub-pc">D4</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY4</p>
-								<p style="font-weight:bold;font-size:1.5em;">库萨摩卢卡</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自行早餐后，在领队的带领下，来到著名的哈士奇公园Husky Park，并自费与可爱的哈士奇们来一场速度与激情并存的哈士奇拉雪橇项目。项目结束后您将和可爱的哈士奇们随意合影，品尝特色小吃和热饮。结束后自由活动并使用午餐。下午您可以在木屋里的桑拿室放松自己，或者来到当地的超市购买后几天的正餐。晚餐后，我们穿好保暖防寒服开始自费体验极地雪地摩托之旅。您将驾驶雪地摩托在专业教练的带领下驰骋于北极圈的自然环境，并一路开到高处寻找神秘的北极光。</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day4_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day4_2.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day4_3.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day5" id="day5">
-					<div class="zjct-img ub ub-ac ub-pc">D5</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY5</p>
-								<p style="font-weight:bold;font-size:1.5em;">库萨摩卢卡</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自行早餐后，您在专业教练的指导下穿上雪鞋，体验湖区雪鞋徒步(Snow-shoe Safari)。随后，在结冰的湖上尝试冰上垂钓(Ice Fishing)。如果您足够幸运有所收获的话，还能参与*鱼类烹饪课程(Fish Cooking)，现场亲自烹饪刚刚从冰湖中上钩的新鲜鱼。自行午餐后，我们来到热情好客的萨米原住民的家中，体验驯鹿拉雪橇(Reindeer Safari)的乐趣。之后在萨米人的木屋内举行篝火烧烤(BBQ)。您可以和萨米人交流，合影，唱歌并了解他们的日常生活。自行晚餐后我们的领队会开车将带您夜游俄罗斯边境(Night Safari to Russian Border)，寻找神秘的北极光。您将有机会在芬俄边界线拍照留念，打卡炫耀！</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day5_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day5_2.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day5_4.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div class="isyuan_headerct">
-										<img src="../../image/day5_5.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day6" id="day6">
-					<div class="zjct-img ub ub-ac ub-pc">D6</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY6</p>
-								<p style="font-weight:bold;font-size:1.5em;">库萨摩卢卡</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;早餐之后，您将体验冰瀑攀岩活动。您将来到位于芬兰最大滑雪场旁的奇特冰瀑布旁，在专业外籍教练的指导下穿戴专业攀岩工具体验独一无二的冰上攀岩的感觉。冰瀑高40米，达到顶峰者将会得到攀冰勇士证书。下午参与全球独家的奇特桑拿巡游。您将在领队的带领下，前往萨隆基小镇体验全球独家冰砖桑拿并尝试勇敢跳入冰湖。随后前往森林养生基地，体验养生桑拿（烟熏桑拿，纯天然北极草本面膜理疗，原生草本植物饮料，特色淋浴）。最后前往户外SPA桑拿，体验严寒中的热气腾腾的露天SPA桑拿，如果天气好就能欣赏曼妙的北极光。</p>
-								<div style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;">
-									<div class="isyuan_headerct">
-										<img src="../../image/day6_1.png" alt="..." class="img-circle isheardct">
-									</div>
-									<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="day7" id="day7">
-					<div class="zjct-img ub ub-ac ub-pc">D7</div>
-					<div class="jieshao">
-						<div class="diandian"></div>
-						<div class="wzms">
-							<div class="wzms-a">
-								<p style="font-weight:bold;margin-top:1em;">DAY7</p>
-								<p style="font-weight:bold;font-size:1.5em;">库萨摩卢卡-赫尔辛基-成都</p>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收拾好行李，带上冰雪的回忆我们回到赫尔辛基，许多人到了赫尔辛基以后时间都花在了景点上，然而赫尔辛基城中还有许多值得一去的地方，所以在最后一天的时间里我们可以去逛逛街，拍拍照，感受一下北欧特有的风情。之后我们前往机场，带上最好的自己回到故乡。</p>
-							</div>
-						</div>
-					</div>
+			<div class="lxzg">
+				<h2 class="title"></h2>
+				<div class="ub ub-pc" style="width:90%;margin:0 auto;overflow: hidden;">
+					<img src="/static/image/map.jpg" class="map">
 				</div>
 			</div>
 		</div>
+		<div class="grid" id="grid">
+			<!-- <figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/1.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第1天 <span>成都-赫尔辛基</span></h2>
+					<p>成都前往芬兰，时间为12小时~14小时，长时间的飞行很疲惫，带个护颈枕可以有效缓解不适，如果不想睡觉的朋友，飞机上有中文的电视电影节目可以用来打发时间。到达赫尔辛基后，接机前往酒店，充分休整后夜游赫尔辛基。赫尔辛基Helsinki濒临波罗的海，是一座古典美与现代文明融为一体的都市，既体现出欧洲古城的浪漫情调，又充满国际化大都市的韵味。同时，她又是一座都市建筑与自然风光巧妙结合在一起的花园城。市内建筑多用浅色花岗岩建成，有“北方洁白城市”之称。</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/2.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/3.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/4.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/5.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/6.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第2天 <span>赫尔辛基-洛瓦涅米</span></h2>
+					<p>酒店早餐后进行赫尔辛基市内观光，参观斯堪的纳维亚半岛最大的东正教教堂乌斯潘斯教堂以及赫尔辛基市区的标志性建筑主教堂，还有全部以岩石建造的别具一格的岩石教堂，之后游览西贝柳斯公园，芬兰伟大的作曲家西贝柳斯是芬兰民族乐派的奠基人和杰出代表，芬兰人视其为音乐之父。下午在码头集市闲逛，自由选购芬兰特产和旅游纪念品。晚上搭乘火车前往圣诞老人的故乡罗瓦涅米。（20:00 从Helsinki中央火车站出发。巴士将依次通过坦佩雷、韦斯屈莱、奥卢，并与第二天早上抵达罗瓦涅米。）</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/6.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/7.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/8.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/9.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/10.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第3天 <span>罗瓦涅米 - 库萨摩卢卡</span></h2>
+					<p>酒店早餐后前往参观圣诞老人村。跨越北纬66度33分，领取跨越北极圈证书。在圣诞老人官方邮局寄上一张带有特别邮戳的纪念卡片，也可以选择请工作人员在来年圣诞节寄出，给自己埋下一份圣诞节惊喜。到圣诞老人办公室，进入神秘的圣诞老人城堡，与圣诞老人会面并合影。 中午从圣诞老人村离开，到达罗瓦涅米原住民驯鹿庄园，在小木屋中品尝鹿园主人烹调的美味驯鹿大餐。午饭后观看芬兰北部特有的大型驯鹿并参加芬兰传统而原始的狩鹿祝福仪式。在庄园主人的保护下，亲自喂食鹿群或与小鹿玩耍，接着体验鹿拉雪橇穿行林间，感受拉普兰风情。晚餐后由领队带领前往入住库萨摩卢卡国家公园旁的木屋。夜晚你可以在山顶上360度全方位观看北极光！库萨摩卢卡位于北极地区，这里的极光极为活跃。</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/10.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/11.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/12.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/13.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/14.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第4天 <span>库萨摩卢卡</span></h2>
+					<p>自行早餐后，在领队的带领下，来到著名的哈士奇公园Husky Park，并自费与可爱的哈士奇们来一场速度与激情并存的哈士奇拉雪橇项目。项目结束后您将和可爱的哈士奇们随意合影，品尝特色小吃和热饮。结束后自由活动并使用午餐。下午您可以在木屋里的桑拿室放松自己，或者来到当地的超市购买后几天的正餐。晚餐后，我们穿好保暖防寒服开始自费体验极地雪地摩托之旅。您将驾驶雪地摩托在专业教练的带领下驰骋于北极圈的自然环境，并一路开到高处寻找神秘的北极光。</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/14.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/15.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/16.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/17.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/18.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第5天 <span>库萨摩卢卡</span></h2>
+					<p>自行早餐后，您在专业教练的指导下穿上雪鞋，体验湖区雪鞋徒步(Snow-shoe Safari)。随后，在结冰的湖上尝试冰上垂钓(Ice Fishing)。如果您足够幸运有所收获的话，还能参与*鱼类烹饪课程(Fish Cooking)，现场亲自烹饪刚刚从冰湖中上钩的新鲜鱼。自行午餐后，我们来到热情好客的萨米原住民的家中，体验驯鹿拉雪橇(Reindeer Safari)的乐趣。之后在萨米人的木屋内举行篝火烧烤(BBQ)。您可以和萨米人交流，合影，唱歌并了解他们的日常生活。自行晚餐后我们的领队会开车将带您夜游俄罗斯边境(Night Safari to Russian Border)，寻找神秘的北极光。您将有机会在芬俄边界线拍照留念，打卡炫耀！</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/18.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/19.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/20.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/21.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba">
+				<img class="bigimg" src="/static/image/22.jpg" alt="img16"/>
+				<figcaption>
+					<h2>第6天 <span>库萨摩卢卡</span></h2>
+					<p>早餐之后，您将体验冰瀑攀岩活动。您将来到位于芬兰最大滑雪场旁的奇特冰瀑布旁，在专业外籍教练的指导下穿戴专业攀岩工具体验独一无二的冰上攀岩的感觉。冰瀑高40米，达到顶峰者将会得到攀冰勇士证书。下午参与全球独家的奇特桑拿巡游。您将在领队的带领下，前往萨隆基小镇体验全球独家冰砖桑拿并尝试勇敢跳入冰湖。随后前往森林养生基地，体验养生桑拿（烟熏桑拿，纯天然北极草本面膜理疗，原生草本植物饮料，特色淋浴）。最后前往户外SPA桑拿，体验严寒中的热气腾腾的露天SPA桑拿，如果天气好就能欣赏曼妙的北极光。</p>
+					<div class="pieimg">
+						<div class="isyuan_headerct">
+							<img src="/static/image/22.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/23.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/24.jpg" class="isheardct">
+						</div>
+						<div class="isyuan_headerct">
+							<img src="/static/image/25.jpg" class="isheardct">
+						</div>
+					</div>
+				</figcaption>			
+			</figure> -->
+		</div>
 	</div>
-	<div class="ub ub-ac ub-pc" style="margin:0 auto;width:80%;height:400px;background: url(../../image/end_img.jpg) no-repeat;">
-		<a href="personalTailor.html" class="uc-a1 dzlx">定制您的旅行</a>
+	<div class="ub ub-ac ub-pc" style="margin:0 auto;width:80%;height:400px;background: url(/static/image/end_img.jpg);background-size:cover;">
+		<a href="/personalTailor" class="uc-a1 dzlx">定制您的旅行</a>
 	</div>
 	<div class="tianchong"></div>
 	<div class="footer ub ub-ac">
@@ -282,13 +244,50 @@
 	    	}
 		});
 	});
-	$("#bukexue").on("click",function(){
+	$(document).on('click',"#bukexue",function(){
 		$("#bukexue").fadeOut("slow");
 	});
-	$(".isheardct").on("click",function(){
+	$(document).on('click',".isheardct",function(){
 		var tpurl = $(this).attr("src");
 		$(".aaa").attr("src",tpurl);
 		$("#bukexue").fadeIn("slow");
 	});
+
+	$(document).ready(function(){
+		createHtml();
+	});
+	function createHtml(){
+		var html = "";
+		var title = {{ title|safe }};
+		var map = {{ map|safe }};
+		$(".title").text(title);
+		$(".map").attr("src","/static/image/"+map);
+		var list = {{ routeDet|safe }};
+		for (var i = 0; i < list.length; i++) {
+			var item = list[i];
+			html += '<figure class="effect-bubba">';
+			html += '<img class="bigimg" src="/static/image/1.jpg" alt="..."/>';
+			html += '<figcaption>';
+			html += '<h2>第' + item.day_numbers + '天 <span>' + item.approach + '</span></h2>';
+			html += '<p>' + item.node_details + '</p>';
+			
+			if(item.detail_pic_number > 0){
+				html += '<div class="pieimg">';	
+				var picUrl = item.detail_pic_address.split("|||");
+				for (var j = 0;j < picUrl.length; j++) {
+					if(j == 4){
+						break;
+					}
+					var pic = picUrl[j];
+					html += '<div class="isyuan_headerct">';
+					html += '<img src="/static/image/' + pic + '" class="isheardct"></div>';
+				}
+				html += '</div>';
+			}
+			
+			html += '</figcaption></figure>';
+		}
+		$("#grid").append(html);
+	}
 </script>
 </html>

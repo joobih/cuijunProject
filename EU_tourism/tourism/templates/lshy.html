@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>路尚会员</title>
+	<meta charset="utf-8">
+	<script src="/static/common/js/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-base.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-box.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/ui-color.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/lshy.css">
+	<link rel="stylesheet" type="text/css" href="/static/common/css/bootstrap.min.css">
+    <script src="/static/common/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header ub ub-ac"> 
+		<div style="width:8%;"></div>
+		<div style="-webkit-box-flex:1;display: -webkit-box;-moz-box-flex:1;display: -moz-box;-ms-flex:1;display: -ms-flexbox;">
+			<div style="-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;float:left;">
+				<img src="/static/image/logo.png" style="height: 35px;">
+			</div>
+			<div class="ub ub-ac uc-a1 query-input">
+                <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+                    <input type="text" style="outline: none;font-family: Arial, '微软雅黑', sans-serif;font-size:1em;border:none;margin-left:0.3em;" />
+            	</div>
+            </div>
+			<div class="uc-a1 search">
+				<button type="submit" class="btn-search">搜索</button>
+			</div>
+		</div>
+		<div>
+			<ul class="bc-border ub t-bla ub-pc zylj">
+				<li><a href="/menu">首页</a></li>
+				<li><a href="/boutiqueRoute">精品路线</a></li>
+				<li><a href="/personalTailor">私人定制</a></li>
+				<li><a href="/lshy">路尚会员</a></li>
+				<li><a href="/aboutUs">关于我们</a></li>
+			</ul>
+		</div>
+		<div style="width:8%;"></div>
+	</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol><!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="/static/image/s_1.jpg" alt="新西兰南岛自驾" />
+				<div class="carousel-caption istbg uc-a2">新西兰南岛自驾</div>
+			</div>
+			<div class="item">
+				<img src="/static/image/s_2.jpg" alt="圣托尼里" />
+				<div class="carousel-caption istbg uc-a2">圣托尼里</div>
+			</div>
+			<div class="item">
+				<img src="/static/image/s_3.jpg" alt="中国九寨沟" />
+				<div class="carousel-caption istbg uc-a2">中国九寨沟</div>
+			</div>
+		</div>
+	</div>
+	<div class="content ub">
+		<div style="margin: 2em 0;">
+			<div class="ub ub-pc uc-a1 login btn-same">登录</div>
+			<div class="ub ub-pc uc-a1 regist">注册</div>
+		</div>
+		<div class="l-reg uc-a1">
+			<div class="zc-reg">
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*电话号码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="" class="dz-input"/>
+			            </div>
+			        </div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*密码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="password" placeholder="" id="" class="dz-input"/>
+			            </div>
+			        </div>
+				</div>
+				<div class="ub ub-pc uc-a1 zc-s" id="login">
+					<button type="submit" class="btn-zc">登录</button>
+				</div>
+			</div>
+		</div>
+		<div class="c-reg uc-a1" style="display:none;">
+			<div class="zc-reg">
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*昵称:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="name" name="name" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi1"></div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*电话号码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="phone" name="phone" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi2"></div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*电子邮箱:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="email" name="email" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi3"></div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*密码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="pwd" name="pwd" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi4"></div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*确认密码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" id="surepwd" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi5"></div>
+				</div>
+				<div style="margin:0.5em 0;">
+					<div class="ub ub-pe tishi" style="width:5em;">*验证码:</div>
+					<div class="ub ub-ac uc-a1 reg-x">
+			            <div class="ub ub-ac ut-s" style="padding: 0.3em 0;">
+			                <input type="text" placeholder="" class="dz-input"/>
+			            </div>
+			        </div>
+			        <div class="tishi">
+			        	<input type="text" onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="width: 80px" />
+			        </div>
+				</div>
+				<div class="ub ub-pc uc-a1 zc-s" id="regist">
+					<button type="submit" class="btn-zc">注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ub ub-ac ub-pc" style="margin:0 auto;width:80%;height:400px;background: url(/static/image/end_img.jpg);background-size:cover;">
+		<a href="/personalTailor" class="uc-a1 dzlx">定制您的旅行</a>
+	</div>
+	<div class="tianchong"></div>
+	<div class="footer ub ub-ac">
+		<div class="link-footer" >
+         	<h4>友情链接 LINK</h4>
+         	<a href="http://www.woqu.com" class="link_a">我趣旅行网</a>
+         	<a href="http://www.qyer.com" class="link_a">穷游网</a>
+         	<a href="http://www.kdhcn.com" class="link_a">康定红葡萄酒</a>
+         	<a href="http://vacations.ctrip.com/" class="link_a">携程旅游</a>
+         	<a href="http://www.lotour.com/" class="link_a">乐途旅游</a>
+         	<a href="http://www.tuniu.com/?p=1558&amp;utm_source=baidu&" class="link_a">途牛旅游网</a>
+         	<a href="http://www.mangocity.com/" class="link_a">芒果网</a>
+         	<a href="http://www.mafengwo.cn" class="link_a">马蜂窝旅游网</a>
+         	<a href="http://www.autohome.com.cn/" class="link_a">汽车之家</a>        
+
+        	<div class="end_line"></div>
+        	<p>版权所有路尚旅游 © 2015-2017蜀ICP备14005513号</p>
+    	</div>
+	</div>
+</body>
+<script type="text/javascript" language="javascript">
+	$(function(){
+		$('.carousel').carousel();
+	});
+	$(function(){
+		$(window).scroll(function(){
+	    	if($(this).scrollTop()>100){
+	    		$(".header").css({position:"fixed","z-index":"99999"});
+	    	}else{
+	    		$(".header").css({"position":"relative"});
+	    	}
+		});
+	});
+
+	$(document).ready(function(){
+		createCode();
+		clickListener();
+	});
+	
+	var code; //在全局 定义验证码  
+	function createCode() {
+	  	code = "";
+		var codeLength = 4;//验证码的长度  
+		var checkCode = document.getElementById("checkCode");
+		var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');//所有候选组成验证码的字符，当然也可以用中文的  
+		  
+		for (var i = 0; i < codeLength; i++) {
+			var charIndex = Math.floor(Math.random() * 60);
+		    code += selectChar[charIndex];
+		}
+	    if (checkCode) {
+		    checkCode.className = "code";
+		    checkCode.value = code;
+	    }
+	    code = code.toLowerCase ();
+	}
+
+	function clickListener(){
+		$(".login").on("click",function(){
+			$(this).addClass("btn-same");
+			$(this).siblings().removeClass("btn-same");
+			$(".l-reg").css("display","block");
+			$(".c-reg").css("display","none");
+		});
+		$(".regist").on("click",function(){
+			$(this).addClass("btn-same");
+			$(this).siblings().removeClass("btn-same");
+			$(".l-reg").css("display","none");
+			$(".c-reg").css("display","block");
+		});
+		$("#regist").on("click",function(){
+			var name = $("#name").val();
+			var phone= $("#phone").val();
+			var email= $("#email").val();
+			var pwd= $("#pwd").val();
+			var surepwd= $("#surepwd").val();
+			/*if (!name) {
+				$(".tishi1").text("昵称不能为空！");
+				$(".tishi1").css("color","red");
+				$("#name").focus();
+				return;
+			}*/
+			if (!phone) {
+				$(".tishi2").text("电话号码不能为空！");
+				$(".tishi2").css("color","red");
+				$("#phone").focus();
+				return;
+			}
+			if (!email) {
+				$(".tishi3").text("电子邮箱不能为空！");
+				$(".tishi3").css("color","red");
+				$("#email").focus();
+				return;
+			}
+			if (!pwd) {
+				$(".tishi4").text("密码不能为空！");
+				$(".tishi4").css("color","red");
+				$("#pwd").focus();
+				return;
+			}
+			if (!surepwd) {
+				$(".tishi5").text("确认密码不能为空！");
+				$(".tishi5").css("color","red");
+				$("#surepwd").focus();
+				return;
+			}
+			$.ajax({
+            type:"post",
+	            url:"/lshy/",
+	            data:{
+	               "name" : name,
+	               "phone" : phone,
+	               "email" : email,
+	               "pwd" : pwd
+	           },  
+	            dataType:"json",
+	            success:function(msg){
+	            	var code = msg.ret_code;
+	            	if(code > 0){
+	            		alert(msg.msg);//账号已存在
+	            	} else {
+	            		alert(msg.msg);
+	            	}
+	            }   
+	        }); 
+		});
+	}
+</script>
+</html>
